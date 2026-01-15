@@ -8,15 +8,10 @@ import pandas as pd
 from typing import Tuple, Dict, Optional, List
 from dataclasses import dataclass
 import joblib
-import os
 
 from sklearn.linear_model import LogisticRegression
 from sklearn.ensemble import RandomForestClassifier, GradientBoostingClassifier
-from sklearn.metrics import (
-    roc_auc_score, roc_curve, precision_recall_curve,
-    classification_report, confusion_matrix, brier_score_loss
-)
-from sklearn.calibration import calibration_curve, CalibratedClassifierCV
+from sklearn.metrics import roc_auc_score, brier_score_loss
 
 try:
     import xgboost as xgb
@@ -72,6 +67,10 @@ def calculate_ks_statistic(y_true: np.ndarray, y_prob: np.ndarray) -> float:
     # Calculate cumulative distributions
     total_events = df['y_true'].sum()
     total_non_events = len(df) - total_events
+    
+    # Handle edge cases
+    if total_events == 0 or total_non_events == 0:
+        return 0.0
     
     df['cum_events'] = df['y_true'].cumsum() / total_events
     df['cum_non_events'] = (1 - df['y_true']).cumsum() / total_non_events
@@ -208,7 +207,6 @@ def train_xgboost(
         scale_pos_weight=scale_pos_weight,
         random_state=42,
         eval_metric='auc',
-        use_label_encoder=False,
         **kwargs
     )
     

@@ -6,9 +6,8 @@ Uses German Credit Dataset from UCI Machine Learning Repository.
 
 import pandas as pd
 import numpy as np
-from typing import Tuple, Optional
+from typing import Tuple
 from sklearn.model_selection import train_test_split
-import os
 
 
 def load_german_credit_data() -> pd.DataFrame:

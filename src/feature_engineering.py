@@ -6,9 +6,7 @@ Creates features for credit risk modeling.
 import pandas as pd
 import numpy as np
 from typing import Tuple, List, Optional
-from sklearn.preprocessing import StandardScaler, LabelEncoder, OneHotEncoder
-from sklearn.compose import ColumnTransformer
-from sklearn.pipeline import Pipeline
+from sklearn.preprocessing import StandardScaler, LabelEncoder
 import warnings
 warnings.filterwarnings('ignore')
 
@@ -205,7 +203,7 @@ def create_weight_of_evidence(
     y: pd.Series,
     feature: str,
     n_bins: int = 10
-) -> Tuple[pd.DataFrame, dict]:
+) -> Tuple[pd.DataFrame, dict, float]:
     """
     Calculate Weight of Evidence (WoE) for a feature.
     

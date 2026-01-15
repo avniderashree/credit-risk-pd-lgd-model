@@ -5,12 +5,8 @@ Comprehensive evaluation metrics for credit risk models.
 
 import numpy as np
 import pandas as pd
-from typing import Tuple, Dict, List, Optional
-from sklearn.metrics import (
-    roc_auc_score, roc_curve, precision_recall_curve,
-    confusion_matrix, classification_report,
-    mean_squared_error, mean_absolute_error, r2_score
-)
+from typing import Tuple, Dict
+from sklearn.metrics import roc_auc_score, roc_curve
 from sklearn.calibration import calibration_curve
 
 

@@ -1,6 +1,6 @@
 # Credit Risk PD/LGD Model
 
-[![Python](https://img.shields.io/badge/Python-3.9+-blue.svg)](https://www.python.org/downloads/)
+[![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)](https://www.python.org/downloads/)
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
 A comprehensive credit risk modeling framework implementing **Probability of Default (PD)** and **Loss Given Default (LGD)** models using machine learning, with full model validation and Expected Loss calculation.

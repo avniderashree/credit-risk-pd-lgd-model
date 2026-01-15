@@ -5,11 +5,11 @@ Loss Given Default (LGD) modeling using regression techniques.
 
 import numpy as np
 import pandas as pd
-from typing import Tuple, Dict, Optional
+from typing import Dict, Optional
 from dataclasses import dataclass
 import joblib
 
-from sklearn.linear_model import LinearRegression, Ridge
+from sklearn.linear_model import Ridge
 from sklearn.ensemble import RandomForestRegressor, GradientBoostingRegressor
 from sklearn.metrics import mean_squared_error, mean_absolute_error, r2_score
 
