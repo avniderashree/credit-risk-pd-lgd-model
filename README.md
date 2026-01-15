@@ -26,8 +26,7 @@ A production-ready credit risk modeling framework implementing **Probability of 
 13. [Code Examples](#-code-examples)
 14. [Customization Guide](#-customization-guide)
 15. [Troubleshooting](#-troubleshooting)
-16. [Technical Skills Demonstrated](#-technical-skills-demonstrated)
-17. [References](#-references)
+16. [References](#-references)
 
 ---
 
@@ -811,19 +810,6 @@ pytest tests/ -v
 # Run with coverage
 pytest tests/ --cov=src --cov-report=term-missing
 ```
-
----
-
-## 🎓 Technical Skills Demonstrated
-
-| Category | Skills |
-|----------|--------|
-| **Credit Risk** | PD, LGD, EAD, Expected Loss, Basel framework, IFRS 9 |
-| **Machine Learning** | Classification, Regression, XGBoost, Random Forest |
-| **Model Validation** | ROC-AUC, Gini, KS, Calibration, Lift, PSI |
-| **Feature Engineering** | WoE, IV, Derived features, Encoding, Scaling |
-| **Python** | pandas, numpy, scikit-learn, xgboost, matplotlib |
-| **Software Engineering** | Modular design, Type hints, Docstrings, Unit tests |
 
 ---
 
