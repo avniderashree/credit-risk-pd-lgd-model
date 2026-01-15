@@ -85,7 +85,7 @@ Credit risk modeling is fundamental to banking and lending. This project impleme
 
 ### Prerequisites
 
-- Python 3.9+
+- Python 3.8+
 - pip
 
 ### Step 1: Clone the Repository
